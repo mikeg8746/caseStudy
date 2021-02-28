@@ -1,0 +1,9 @@
+//
+//  Debug.xcconfig
+//  LeanScale
+//
+//  Created by Mayank G on 26/02/21.
+//  Copyright © 2021 Mayank G. All rights reserved.
+//
+
+BACKEND_URL = https:\/\/api.rawg.io/api/games

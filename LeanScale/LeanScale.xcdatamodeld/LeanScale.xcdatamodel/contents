@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FavGame" representedClassName="FavGame" syncable="YES" codeGenerationType="class">
+        <attribute name="backgroundImage" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="metacritic" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="favgenre" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavGenre" inverseName="favgame" inverseEntity="FavGenre"/>
+    </entity>
+    <entity name="FavGenre" representedClassName="FavGenre" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="favgame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FavGame" inverseName="favgenre" inverseEntity="FavGame"/>
+    </entity>
+    <entity name="ViewedGame" representedClassName="ViewedGame" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="FavGame" positionX="-54.18359375" positionY="42.03515625" width="128" height="118"/>
+        <element name="FavGenre" positionX="138.25390625" positionY="134.91015625" width="128" height="88"/>
+        <element name="ViewedGame" positionX="136.03515625" positionY="-14.125" width="128" height="58"/>
+    </elements>
+</model>
