@@ -83,6 +83,11 @@ class GamesVC: UIViewController {
         gameDetail.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(gameDetail, animated: true)
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.view.endEditing(true)
+    }
 }
 
 extension GamesVC : UISearchBarDelegate {
@@ -102,5 +107,9 @@ extension GamesVC : UISearchBarDelegate {
             self.gamesViewModel.datasource = []
             loadGamesData()
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
